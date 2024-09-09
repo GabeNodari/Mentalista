@@ -1,27 +1,30 @@
-var numeroChutes = 0;
-var numeroSecreto = parseInt (Math.random() * 101);
-var maximoTentativas = 5;
-var acertou = false;
+const MAX_TENTATIVAS = 5;
+const NUMERO_SECRETO = Math.floor(Math.random() * 51);
 
-function verifica_chute(chute, numeroSecreto, numeroChutes) {
-    if (chute == numeroSecreto) {
-      alert ('Acertou! :)')
-      return true;
-    } else if (chute > numeroSecreto) {
-      alert ('Errou! :(' + '\nO número secreto é menor que o que você colocou!' + '\nO seu número de chutes é: ' + numeroChutes + ' de 5')
-    } else if (chute < numeroSecreto) {
-      alert ('Errou! :(' + '\nO número secreto é maior do que você colocou!' + '\nO seu número de chutes é: ' + numeroChutes + ' de 5')
-    }
-    return false;
+let numeroChutes = 0;
+let acertou = false;
+
+//Verifica se o chute foi correto e retorna true se acertou ou uma dica (número dever ser maior ou menor)//
+function verificaChute(chute, numeroSecreto, tentativasRestantes) {
+  if (chute === numeroSecreto) {
+    alert('Acertou! :)');
+    return true;
+  } 
+  const dica = chute > numeroSecreto ? 'menor' : 'maior';
+  alert(`Errou! :( \nO número secreto é ${dica} do que você colocou! \nVocê tem ${tentativasRestantes} tentativas restantes.`);
+  return false;
 }
 
-while (!acertou && numeroChutes < maximoTentativas) {
-  let chute = prompt ('Digite um número entre 1 e 1000: ');
-    numeroChutes++;
-  acertou = verifica_chute(chute, numeroSecreto, numeroChutes);
+//Exibe o prompt com as instruções; valida o input; atualiza o número de tentativas; verifica se acertou ou exibe o número secreto ao final//
+while (!acertou && numeroChutes < MAX_TENTATIVAS) {
+  const chute = parseInt(prompt('Digite um número entre 1 e 50: '), 10);
+  if (isNaN(chute)) {
+    alert('Por favor, insira um número válido!');
+    continue;
+  }
+  numeroChutes++;
+  acertou = verificaChute(chute, NUMERO_SECRETO, MAX_TENTATIVAS - numeroChutes);
 }
-
 if (!acertou) {
-  alert ('Número máximo de tentativas alcançado!' + '\nO número secreto é: ' + numeroSecreto)
+  alert(`Número máximo de tentativas alcançado!\nO número secreto era: ${NUMERO_SECRETO}`);
 }
-    
