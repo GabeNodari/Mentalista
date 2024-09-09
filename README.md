@@ -1,5 +1,5 @@
 # Projeto de "Mentalista"
-Este é um simples projeto de "Mentalista" que utiliza JavaScript. Ele foi desenvolvido durante a 7ª Imersão proporcionada pela Alura.
+Este é um projeto somples de "Mentalista" que utiliza JavaScript. Ele foi desenvolvido durante a 7ª Imersão proporcionada pela Alura.
 
 **Funcionalidades:**
 
