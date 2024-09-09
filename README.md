@@ -1,2 +1,2 @@
 # Mentalista
-Projeto de "Mentalista" nada convencional usando JavaScript (vanilla).
+Projeto de "Mentalista" nada convencional usando JavaScript.
