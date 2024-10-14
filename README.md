@@ -1,5 +1,5 @@
 # Projeto de "Mentalista"
-Este é um projeto somples de "Mentalista" que utiliza JavaScript. Ele foi desenvolvido durante a 7ª Imersão proporcionada pela Alura.
+Este é um projeto de "Mentalista", jogo no qual o player precisa acertar o número correto utilizando dicas. Ele foi desenvolvido durante a 7ª Imersão proporcionada pela Alura, com foco em JavaScript.
 
 **Funcionalidades:**
 
