@@ -4,7 +4,7 @@ const NUMERO_SECRETO = Math.floor(Math.random() * 51);
 let numeroChutes = 0;
 let acertou = false;
 
-//Verifica se o chute foi correto; retorna dica
+//Função: verificação de chute; dica
 function verificaChute(chute, numeroSecreto, tentativasRestantes) {
   if (chute === numeroSecreto) {
     alert('Acertou! :)');
