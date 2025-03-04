@@ -15,7 +15,7 @@ function verificaChute(chute, numeroSecreto, tentativasRestantes) {
   return false;
 }
 
-//Loop do jogo
+//Loop: jogo
 while (!acertou && numeroChutes < MAX_TENTATIVAS) {
   const CHUTE = parseInt(prompt('Digite um número entre 1 e 50: '), 10);
   if (isNaN(CHUTE)) {
@@ -25,6 +25,8 @@ while (!acertou && numeroChutes < MAX_TENTATIVAS) {
   numeroChutes++;
   acertou = verificaChute(CHUTE, NUMERO_SECRETO, MAX_TENTATIVAS - numeroChutes);
 }
+
+//If: tentivas excedidas
 if (!acertou) {
   alert(`Número máximo de tentativas alcançado!\nO número secreto era: ${NUMERO_SECRETO}`);
 }
